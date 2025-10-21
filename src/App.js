@@ -1,25 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
-
+// Dans App.js
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Bonjour prenom="Marie" />
+      <Bonjour prenom="Pierre" />
     </div>
   );
+}
+
+// Un nouveau composant
+function Bonjour(props) {
+  return <h2>Salut, {props.prenom} !</h2>;
 }
 
 export default App;
